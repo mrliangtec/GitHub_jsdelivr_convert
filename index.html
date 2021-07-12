@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github链接转jsDeliver - 梁先生哎</title>
+</head>
+
+<body>
+
+    <form action="">
+        <p>
+            作者：<input type="text" name="author" id="author">
+        </p>
+        <p>
+            项目名：<input type="text" name="devName" id="devName">
+        </p>
+        <p>
+            文件名（如在文件夹里面请带上文件夹）：<input type="text" name="file" id="file">
+        </p>
+        <p>
+            <input type="button" name="转换" id="" value="点击转换" onclick="convert();">
+        </p>
+    </form>
+
+    <script>
+        function convert() {
+            var author = document.getElementById('author').value;
+            var devName = document.getElementById('devName').value;
+            var file = document.getElementById('file').value;
+            alert('https://cdn.jsdelivr.net/gh/' + author + '/' + devName + '/' + file);
+        }
+    </script>
+    <!-- https://cdn.jsdelivr.net/gh/user/repo@version/file -->
+    <!-- https://cdn.jsdelivr.net/gh/mrliangtec/static_live2d_api/autoload.js -->
+</body>
+
+</html>
